@@ -62,7 +62,12 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ),
         actions: <Widget>[
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings_outlined))
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.settings_outlined,
+                color: Colors.lightBlue,
+              ))
         ],
       ),
       body: SafeArea(child: ListView.builder(
