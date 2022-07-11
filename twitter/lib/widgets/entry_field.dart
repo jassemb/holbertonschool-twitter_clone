@@ -27,7 +27,7 @@ class CustomEntryField extends StatelessWidget {
             fillColor: Colors.grey.shade200,
             hintText: hint,
             border: OutlineInputBorder(
-              borderSide: BorderSide(width: 3, color: Colors.amberAccent),
+              borderSide: BorderSide(width: 3, color: Colors.blue),
               borderRadius: BorderRadius.circular(30.0),
             ),
           ),

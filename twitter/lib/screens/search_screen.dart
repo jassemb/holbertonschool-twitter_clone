@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:twitter/widgets/entry_field.dart';
 
 import '../widgets/users_search_results_widget.dart';
 

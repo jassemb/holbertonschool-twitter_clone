@@ -56,22 +56,34 @@ class PostWidget extends StatelessWidget {
                         fontWeight: FontWeight.w800,
                         color: Colors.grey.shade400),
                   ),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.arrow_drop_down))
+                  SizedBox(
+                    width: 100,
+                  ),
+                  IconButton(
+                      onPressed: () {}, icon: Icon(Icons.arrow_drop_down))
                 ],
               ),
               Expanded(
                 child: SizedBox(
-                  width: 250,
-                  height: 500,
+                  width: 300,
+                  height: 300,
                   child: Text(post),
                 ),
               ),
-              Text(
-                "#$tag",
-                style: GoogleFonts.mulish(
-                  fontSize: 12,
-                  color: Colors.blue,
-                ),
+              Row(
+                children: [
+                  Text(
+                    "#$tag",
+                    style: GoogleFonts.mulish(
+                      fontSize: 12,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  // ignore: prefer_const_constructors
+                  SizedBox(
+                    width: 210,
+                  )
+                ],
               ),
             ],
           ),

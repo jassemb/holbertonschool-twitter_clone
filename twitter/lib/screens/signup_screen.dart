@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:twitter/widgets/flat_button.dart';
 
+import '../providers/auth_state.dart';
 import '../widgets/entry_field.dart';
 
 class SignUp extends StatefulWidget {
@@ -78,7 +77,7 @@ class _SignUpState extends State<SignUp> {
               ),
               CustomEntryField(
                 hint: 'Enter Password',
-                controller: _emailController,
+                controller: _passwordController,
                 isPassword: true,
               ),
               CustomEntryField(
@@ -89,7 +88,9 @@ class _SignUpState extends State<SignUp> {
               Center(
                 child: CustomFlatButton(
                   label: "Sing up",
-                  onPressed: () {},
+                  onPressed: () {
+                    signUpUser;
+                  },
                 ),
               ),
               // ignore: prefer_const_constructors
@@ -98,5 +99,15 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
+  }
+
+  void signUpUser() async {
+    context.read<Auth>().signUpWithEmail(
+          email: _emailController.text,
+          password: _passwordController.text,
+          context: context,
+        );
+    Navigator.pushNamed(context, '/homescreen');
+
   }
 }
